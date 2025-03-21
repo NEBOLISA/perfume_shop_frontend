@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, closeSideBar, setIsOpen }) => {
                 <IoCloseOutline onClick={closeSideBar} className=" absolute top-4 right-2 w-8 h-8" />
 
 
-                <h2 className="text-xl font-semibold my-6 header">Reed</h2>
+                <Link  to="/home"className="text-xl font-semibold my-6 header">Reed</Link>
 
 
 
@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen, closeSideBar, setIsOpen }) => {
 
 
                 <nav className="flex flex-col space-y-4">
-                    <Link to="/" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/home" className="hover:bg-gray-700 p-2 rounded-md">
                         Home
                     </Link>
                     <Link to="/men" className="hover:bg-gray-700 p-2 rounded-md">
