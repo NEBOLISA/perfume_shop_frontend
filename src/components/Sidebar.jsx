@@ -32,23 +32,24 @@ const Sidebar = ({ isOpen, closeSideBar, setIsOpen }) => {
 
 
                 <nav className="flex flex-col space-y-4">
-                    <Link to="/home" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/home" onClick={()=>setIsOpen(false)} className="hover:bg-gray-700 p-2 rounded-md">
                         Home
                     </Link>
-                    <Link to="/men" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/men" onClick={()=>setIsOpen(false)}  className="hover:bg-gray-700 p-2 rounded-md">
                         Men
                     </Link>
-                    <Link to="/women" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/women" onClick={()=>setIsOpen(false)}  className="hover:bg-gray-700 p-2 rounded-md">
                         Women
                     </Link>
-                    <Link to="/profile" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/profile"onClick={()=>setIsOpen(false)}  className="hover:bg-gray-700 p-2 rounded-md">
                         Profile
                     </Link>
-                    <Link to="/contact" className="hover:bg-gray-700 p-2 rounded-md">
+                    <Link to="/contact"onClick={()=>setIsOpen(false)}  className="hover:bg-gray-700 p-2 rounded-md">
                         Contact Us
                     </Link>
                     <Link
                         to="/Create-Product"
+                        onClick={()=>setIsOpen(false)} 
                         className="hover:bg-gray-700 p-2 rounded-md"
                     >
                         Create Product
