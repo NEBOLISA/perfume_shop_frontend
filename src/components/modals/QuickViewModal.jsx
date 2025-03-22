@@ -94,10 +94,10 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
 
 
                     </div>
-                    <div className='lg:flex-1/2 pt-8 px-5   h-full '>
+                    <div className='lg:flex-1/2 md:pt-8 pt-3 px-5   h-full '>
                         <h3 className=' font-medium text-2xl dosis'>{selectedProduct?.name}</h3>
                        
-                         <SocialMediaIcons/>
+                         <SocialMediaIcons extraStyles={"!md:mt-14 !mt-4"} />
 
                         <h2 className='font-normal roboto mt-5'>Price: <span className='font-bold ml-8 text-2xl roboto '>{`₦${ (selectedProduct && (selectedProduct?.price * itemInCart?.quantity || selectedProduct?.price).toLocaleString('en-US', {
                                 minimumFractionDigits: 2,
@@ -113,7 +113,7 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
                             </div>
 
                         </div>
-                        <div className='flex items-center gap-3 mt-6 flex-wrap lg:flex-nowrap'>
+                        <div className='flex items-center gap-1 md:gap-3 mt-6 flex-wrap lg:flex-nowrap'>
                             <div className='w-full' onClick={handleAddToCart}>
                             <AddToCartBtn extraStyles={"bg-black rounded-sm w-[95%]"}  text={"Add to cart"}/>
                             </div>
