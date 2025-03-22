@@ -48,7 +48,7 @@ const ReviewContentBox = ({ productToView, review }) => {
                         <IoMdStar
                             key={index}
                             className={`  w-6 h-6  cursor-pointer 
-                                ${productToView?.averageRating - 1 >= index ? "text-red-900 stroke-0" : "text-white stroke-gray-400 stroke-8"} 
+                                ${productToView?.rating - 1 >= index ? "text-red-900 stroke-0" : "text-white stroke-gray-400 stroke-8"} 
                                                         `} />
                     )}
                 </div>
