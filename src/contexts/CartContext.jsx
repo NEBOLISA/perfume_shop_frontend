@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
                 ...state,
                 cart: state.cart.map((item)=>
                     item._id === action.payload._id ?
-                {...item, added:true}
+                {...item, added:action.payload.added,}
                 :item
                 )
             }

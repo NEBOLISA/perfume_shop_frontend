@@ -53,7 +53,7 @@ const Product = () => {
             },3000)
           
         }
-        dispatch({ type: "ADD_TO_CART", payload: { ...productToView, quantity:1} });
+        dispatch({ type: "ADD_TO_CART", payload: { ...productToView, quantity:1,added:true} });
       };
     //   function to handle increase of quantity
     const handleQuantityIncrease = () => {

@@ -27,7 +27,7 @@ const ProductCard = ({product,setSelectedItemId,setSelectedProduct}) => {
             },3000)
           
         }
-        dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity:1} });
+        dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity:1,added:true} });
       };
     
       //function to open the quick view modal

@@ -13,7 +13,7 @@ const ReviewContentBox = ({ productToView, review }) => {
     const formatCreatedAt = (createdAt) => {
         return formatDistanceToNow(new Date(createdAt), { addSuffix: true });
     };
-          console.log({productToView})
+     
     return (
         <div className='w-full flex gap-4 flex-wrap lg:flex-nowrap mb-2 border border-gray-200 mt-3 rounded-md p-4'>
             <div className='lg:flex-[40%] flex-auto bg-gray-200 border border-gray-300 p-3 rounded-md mt-4'>

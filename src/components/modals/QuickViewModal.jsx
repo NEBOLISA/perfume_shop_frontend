@@ -18,17 +18,23 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
     const handleAddToCart = (e) => {
         e.preventDefault()
         e.stopPropagation()
+        const isItemAdded = itemInCart?.added
+        
         if(itemInCart?.added){
             setCartUpdateMsg("Product Already Added")
+           
             setTimeout(()=>{
               setCartUpdateMsg("")
+             
             },3000)
           
+        }else{
+            dispatch({ type: "ADD_TO_CART", payload: { ...selectedProduct, quantity:1, added:true} });
         }
-        dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity:1} });
+       
       };
 
-
+     
     useEffect(() => {
         selectedProduct && setSelectedPic(selectedProduct?.pictures[0])
     }, [selectedProduct])
