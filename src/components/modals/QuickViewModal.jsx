@@ -59,7 +59,7 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
                 : "-translate-x-[200%] opacity-0"} bg-white w-[80%] mx-auto my-auto fixed inset-0 z-80
              text-black transition-all duration-500 ease-in-out  lg:h-[60%] h-max pb-4  lg:pb-0`}>
                 <div className='flex items-center justify-center w-full'>
-                    <div className='lg:hidden mt-12 flex justify-between gap-8 items-center '>
+                    <div className='lg:hidden mt-12 flex justify-between gap-4 items-center flex-wrap '>
                         {selectedProduct && selectedProduct?.pictures.map((pic, index) => (
                             <div onClick={() => setSelectedPic(pic)} key={index} className={`${pic.length === 0 ? "hidden":"block"}`}>
                                 {pic && <img className={`${selectedPic === pic && "border-3 rounded-lg border-black"} w-10 h-10 mb-4  cursor-pointer hover:scale-125 `} src={pic} alt="preview-pic" />}
@@ -72,7 +72,7 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
                 </div>
 
                 <div className='sm:pt-0  h-full w-full flex flex-col  lg:flex-row items-center justify-center overflow-scroll'>
-                    <IoCloseOutline onClick={() => setSelectedItemId("")} className='absolute top-2 lg:right-4 right-2 w-12 h-12 cursor-pointer' />
+                    <IoCloseOutline onClick={() => setSelectedItemId("")} className='absolute top-1 lg:right-4 right-2 w-8 h-8 lg:w-12 lg:h-12 cursor-pointer' />
                     <div className=' flex justify-center items-center lg:border-r-2 lg:border-gray-200 relative h-max lg:flex-1/2 lg:h-full'>
                         <div className='lg:p-8 px-8'>
                             <div className='sm:absolute top-4 left-4 hidden lg:block '>
@@ -113,7 +113,7 @@ const QuickViewModal = ({ setSelectedItemId, openViewModalOpen, selectedProduct 
                             </div>
 
                         </div>
-                        <div className='flex items-center gap-3 mt-6'>
+                        <div className='flex items-center gap-3 mt-6 flex-wrap lg:flex-nowrap'>
                             <div className='w-full' onClick={handleAddToCart}>
                             <AddToCartBtn extraStyles={"bg-black rounded-sm w-[95%]"}  text={"Add to cart"}/>
                             </div>

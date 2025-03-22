@@ -50,33 +50,33 @@ const ProductCard = ({product,setSelectedItemId,setSelectedProduct}) => {
    
      <div onClick={handleNavigate} className='cursor-pointer relative bg-white p-4 rounded-xl w-full  lg:w-max h-max'>
        
-        <div className='flex  items-center justify-between lg:justify-center gap-4  '>
-            <div>
+        <div className='flex  items-center  justify-center  sm:justify-between lg:justify-center gap-0 sm:gap-4 flex-wrap sm:flex-nowrap  '>
+            <div className='w-full md:w-max'>
                 <div 
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    className="w-26 h-26 sm:w-40 sm:h-45 rounded-sm overflow-hidden transition-all relative duration-500 ease-in-out">
+                    className="w-36 h-36 sm:w-40 sm:h-45 rounded-sm overflow-hidden transition-all relative duration-500 ease-in-out mx-auto sm:mx-0">
                     <img src={product?.pictures[0]}  
                     alt="Product Default" 
                     className={`absolute inset-0 object-cover transition-opacity duration-500 ${
                     isHovered ? "opacity-0" : "opacity-100"
-                    } w-26 h-26 sm:w-40 sm:h-45 rounded-sm`} />
+                    } w-full h-full sm:w-40 sm:h-45 rounded-sm`} />
                     <img src={product?.pictures[1]}  
                     alt="Product Hover" 
                     className={`absolute inset-0 object-cover transition-opacity duration-500 ${
                     isHovered ? "opacity-100" : "opacity-0"
-                    }  w-26 h-26 sm:w-40 sm:h-45 rounded-sm`} />
+                    }  w-full h-full sm:w-40 sm:h-45 rounded-sm`} />
             
                 </div>
        
-                <h2 className='text-2xl font-medium ml-2 mt-4'>{`₦${product?.price.toLocaleString('en-US', {
+                <h2 className='text-2xl font-medium ml-0 md:ml-2 mt-4'>{`₦${product?.price.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
                       })}`}</h2>
       
             </div>
    
-            <div>
+            <div className='w-full md:w-max'>
                 <h1 className='text-2xl font-semibold mb-1 w-[90%] leading-6'>{product?.name}</h1>
                 <h3 className='text-sm font-light mb-3'>{`(${product?.quantity})`}</h3>
                 <CallToActionBtn card/>

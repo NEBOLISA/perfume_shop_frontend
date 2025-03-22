@@ -12,7 +12,7 @@ const SearchBar = () => {
   };
   
   return (
-    <div className="relative w-[200px] rounded-2xl bg-white h-[30px] 
+    <div className="relative w-[150px] sm:w-[200px]  rounded-2xl bg-white h-[30px] 
     ">
       <input
         ref={inputRef}
